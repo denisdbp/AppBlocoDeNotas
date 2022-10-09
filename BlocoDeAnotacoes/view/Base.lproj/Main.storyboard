@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7b-ji-QMF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Minhas anotações-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MinhasAnotacoesViewController" customModule="BlocoDeAnotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="175" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-Jd-8w8">
+                                <rect key="frame" x="0.0" y="108" width="414" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Pesquisar por anotação" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-32-sJE">
+                                <rect key="frame" x="0.0" y="57" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.72248323160000005" green="0.59218685869999999" blue="0.4310086394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eZW-Jd-8w8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0cJ-1q-7Uf"/>
+                            <constraint firstItem="eZW-Jd-8w8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3RW-iq-vJT"/>
+                            <constraint firstItem="eZW-Jd-8w8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uo4-fF-qjY"/>
+                            <constraint firstItem="eZW-Jd-8w8" firstAttribute="top" secondItem="dqh-32-sJE" secondAttribute="bottom" id="a5a-hg-1KC"/>
+                            <constraint firstItem="dqh-32-sJE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fRW-W7-QLf"/>
+                            <constraint firstItem="dqh-32-sJE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="jxh-FT-HEc"/>
+                            <constraint firstItem="dqh-32-sJE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x4I-Ea-y4X"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Minhas anotações" id="Frf-ws-KQ1">
+                        <imageReference key="image" image="note.text" catalog="system" symbolScale="large" renderingMode="original"/>
+                        <imageReference key="largeContentSizeImage" image="note.text" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="ghi-PT-1fQ"/>
+                    <connections>
+                        <outlet property="minhasAnotacoesTableView" destination="eZW-Jd-8w8" id="MSJ-cG-TbN"/>
+                        <outlet property="pesquisarAnotacoesSearchBar" destination="dqh-32-sJE" id="m5N-u1-Nwh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="39.508928571428569"/>
+        </scene>
+        <!--Nova anotação-->
+        <scene sceneID="Yg3-bu-Qed">
+            <objects>
+                <viewController id="ztH-ue-uaf" customClass="AnotacoesViewController" customModule="BlocoDeAnotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1DV-19-14f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JPZ-CP-oMW">
+                                <rect key="frame" x="0.0" y="154" width="414" height="659"/>
+                                <color key="backgroundColor" red="0.72248323160000005" green="0.59218685869999999" blue="0.4310086394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo da anotação..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohD-dD-CX1">
+                                <rect key="frame" x="0.0" y="120" width="414" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="anR-Ch-qcp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Rq-NS-fpz">
+                                <rect key="frame" x="0.0" y="54" width="414" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsc-fM-Qab">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="66"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Nova Anotação">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Futura-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="novaAnotacaoButton:" destination="ztH-ue-uaf" eventType="touchUpInside" id="oBK-Xf-8x5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-TL-FYP">
+                                        <rect key="frame" x="127.5" y="0.0" width="138" height="66"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Salvar">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Futura-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="salvarAnotacaoButton:" destination="ztH-ue-uaf" eventType="touchUpInside" id="0lB-xu-U7B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwm-uS-alm">
+                                        <rect key="frame" x="265.5" y="0.0" width="148.5" height="66"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Limpar">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Futura-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="limparAnotacaoButton:" destination="ztH-ue-uaf" eventType="touchUpInside" id="B7y-Pg-k0j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="0Fc-YK-5GS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cFU-lR-IpX"/>
+                        <color key="backgroundColor" red="0.72248323160000005" green="0.59218685869999999" blue="0.4310086394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ohD-dD-CX1" firstAttribute="trailing" secondItem="cFU-lR-IpX" secondAttribute="trailing" id="3Kb-Rd-L3t"/>
+                            <constraint firstAttribute="trailing" secondItem="5Rq-NS-fpz" secondAttribute="trailing" id="6XE-Kc-eZK"/>
+                            <constraint firstItem="5Rq-NS-fpz" firstAttribute="top" secondItem="cFU-lR-IpX" secondAttribute="top" constant="10" id="ROF-mV-jCh"/>
+                            <constraint firstItem="5Rq-NS-fpz" firstAttribute="leading" secondItem="cFU-lR-IpX" secondAttribute="leading" id="ST8-7B-qyS"/>
+                            <constraint firstItem="ohD-dD-CX1" firstAttribute="top" secondItem="5Rq-NS-fpz" secondAttribute="bottom" id="bYV-ZZ-1cp"/>
+                            <constraint firstItem="JPZ-CP-oMW" firstAttribute="leading" secondItem="cFU-lR-IpX" secondAttribute="leading" id="hPI-Z6-Nxk"/>
+                            <constraint firstItem="ohD-dD-CX1" firstAttribute="leading" secondItem="cFU-lR-IpX" secondAttribute="leading" id="m6R-6n-7kU"/>
+                            <constraint firstItem="JPZ-CP-oMW" firstAttribute="trailing" secondItem="cFU-lR-IpX" secondAttribute="trailing" id="mUL-ob-2Pu"/>
+                            <constraint firstItem="JPZ-CP-oMW" firstAttribute="top" secondItem="ohD-dD-CX1" secondAttribute="bottom" id="pXS-aA-KdR"/>
+                            <constraint firstItem="cFU-lR-IpX" firstAttribute="bottom" secondItem="JPZ-CP-oMW" secondAttribute="bottom" id="xWG-Ci-1tn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Nova anotação" id="YVC-2w-CIp">
+                        <imageReference key="image" image="pencil" catalog="system" symbolScale="large" renderingMode="original"/>
+                        <imageReference key="largeContentSizeImage" image="pencil" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="anotacaoTextField" destination="JPZ-CP-oMW" id="Loj-zz-c28"/>
+                        <outlet property="tituloAnotacaoTextField" destination="ohD-dD-CX1" id="pku-tr-Rhy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZW-hd-2Ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.521739130435" y="39.508928571428569"/>
+        </scene>
+        <!--Ajuda-->
+        <scene sceneID="pKv-MR-idl">
+            <objects>
+                <viewController id="oST-I8-4da" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iB5-2a-yNn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como criar uma anotação ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifa-iN-IHy">
+                                <rect key="frame" x="10" y="64" width="394" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mke-Ah-Bf2">
+                                <rect key="frame" x="10" y="104" width="394" height="55"/>
+                                <string key="text">Para criar uma anotação, basta clica na Aba Nova Anotação digitar o título e a anotação e depois clicar em Salvar. Obs: Os campos não podem ficar em branco.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como alterar uma anotação ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-gs-Inp">
+                                <rect key="frame" x="10" y="174" width="394" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikY-87-wJ5">
+                                <rect key="frame" x="10" y="214" width="394" height="55"/>
+                                <string key="text">Para alterar uma anotação, basta ir na aba Minhas Anotações e selecionar a anotação que deseja alterar, fazer suas alterações e depois clicar em Salvar.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como excluir uma anotação ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-fi-ce7">
+                                <rect key="frame" x="10" y="284" width="394" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-4W-tQ6">
+                                <rect key="frame" x="10" y="324" width="394" height="112"/>
+                                <string key="text">Para excluir uma anotação, basta ir na aba Minhas Anotações segurar e arrastar para o lado a anotação que deseja exluir e ira aparecer um botão vermelho escrito Remover Anotação, basta clicar em Remover, ira aparecer uma confirmação se deseja realmente remover, para confirmar basta clicar em Remover.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como pesquisar uma anotação ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAr-tA-Hs4">
+                                <rect key="frame" x="10" y="451" width="394" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqA-zu-Ss6">
+                                <rect key="frame" x="10" y="491" width="394" height="74"/>
+                                <string key="text">Para pesquisar uma anotação, basta ir na aba Minhas Anotações, e no topo da tela terá um campo para pesquisa, basta neste campo digitar sua pesquisa. Você pode pesquisar pelo título ou descrição da anotação.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2fu-jZ-tIY"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="Ifa-iN-IHy" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="0GF-h8-J7a"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="bRR-fi-ce7" secondAttribute="trailing" constant="10" id="2qa-iV-VSz"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="mke-Ah-Bf2" secondAttribute="trailing" constant="10" id="9DK-7K-M8C"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="ikY-87-wJ5" secondAttribute="trailing" constant="10" id="Be8-RB-vqy"/>
+                            <constraint firstItem="zNB-gs-Inp" firstAttribute="top" secondItem="mke-Ah-Bf2" secondAttribute="bottom" constant="15" id="E4M-eW-g6Z"/>
+                            <constraint firstItem="bRR-fi-ce7" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="Eds-sN-JPZ"/>
+                            <constraint firstItem="Ifa-iN-IHy" firstAttribute="top" secondItem="2fu-jZ-tIY" secondAttribute="top" constant="20" id="HQJ-9Y-huF"/>
+                            <constraint firstItem="ikY-87-wJ5" firstAttribute="top" secondItem="zNB-gs-Inp" secondAttribute="bottom" constant="10" id="LOy-BE-YFI"/>
+                            <constraint firstItem="bRR-fi-ce7" firstAttribute="top" secondItem="ikY-87-wJ5" secondAttribute="bottom" constant="15" id="MGH-xZ-6O2"/>
+                            <constraint firstItem="iqA-zu-Ss6" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="NI2-ou-asJ"/>
+                            <constraint firstItem="zNB-gs-Inp" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="PqB-Zd-LQE"/>
+                            <constraint firstItem="mke-Ah-Bf2" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="Qhy-ei-d4n"/>
+                            <constraint firstItem="Fu1-4W-tQ6" firstAttribute="top" secondItem="bRR-fi-ce7" secondAttribute="bottom" constant="10" id="QyY-6l-QGZ"/>
+                            <constraint firstItem="mke-Ah-Bf2" firstAttribute="top" secondItem="Ifa-iN-IHy" secondAttribute="bottom" constant="10" id="T8K-WC-vmq"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="Ifa-iN-IHy" secondAttribute="trailing" constant="10" id="V80-aA-et6"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="tAr-tA-Hs4" secondAttribute="trailing" constant="10" id="W5y-6A-a4r"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="Fu1-4W-tQ6" secondAttribute="trailing" constant="10" id="fta-hf-Q1n"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="iqA-zu-Ss6" secondAttribute="trailing" constant="10" id="gAf-IV-z9y"/>
+                            <constraint firstItem="tAr-tA-Hs4" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="oDk-I3-etg"/>
+                            <constraint firstItem="iqA-zu-Ss6" firstAttribute="top" secondItem="tAr-tA-Hs4" secondAttribute="bottom" constant="10" id="rkL-8z-Zrd"/>
+                            <constraint firstItem="ikY-87-wJ5" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="tW3-0W-9U5"/>
+                            <constraint firstItem="tAr-tA-Hs4" firstAttribute="top" secondItem="Fu1-4W-tQ6" secondAttribute="bottom" constant="15" id="tw1-JE-yWL"/>
+                            <constraint firstItem="Fu1-4W-tQ6" firstAttribute="leading" secondItem="2fu-jZ-tIY" secondAttribute="leading" constant="10" id="v1k-zH-0vc"/>
+                            <constraint firstItem="2fu-jZ-tIY" firstAttribute="trailing" secondItem="zNB-gs-Inp" secondAttribute="trailing" constant="10" id="x1v-ZS-3aF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajuda" image="book" catalog="system" id="sZ1-rd-OqF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHP-J4-Aet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2411.594202898551" y="39.508928571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RN5-bf-oef">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I7b-ji-QMF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cd-SN-oKR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="buO-f7-xfh"/>
+                        <segue destination="ztH-ue-uaf" kind="relationship" relationship="viewControllers" id="wfJ-gQ-uYc"/>
+                        <segue destination="oST-I8-4da" kind="relationship" relationship="viewControllers" id="CL3-UH-dTE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Nl-eR-aZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
